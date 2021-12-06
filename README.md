@@ -2,7 +2,7 @@
 A thread pool based on pthread. att. I am a new learner and not sure the correctness of my code.
 
 ### intro
-As we know that init and destroy a thread is time-comsuming.To avoid frequent init/destroy , I write a thread pool to help me manage these trivals.
+Init and destroy a thread is time-comsuming.To avoid frequent init/destroy , I write a thread pool to help me manage these trivals.
 A thread pool contain a group of threads waiting for jobs.Before go to the detail , we should first declare some defination:
 
 ##### workers

@@ -1,5 +1,5 @@
 # thread-pool-pthread
-a thread pool based on pthread
+A thread pool based on pthread. att. I am a new learner and not sure the correctness of my code.
 
 ### intro
 As we know that init and destroy a thread is time-comsuming.To avoid frequent init/destroy , I write a thread pool to help me manage these trivals.

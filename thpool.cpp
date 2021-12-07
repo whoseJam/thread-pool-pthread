@@ -4,6 +4,7 @@
 #include<pthread.h>
 #include<iostream>
 #include<unistd.h>
+#include<signal.h>
 
 #include"thpool.hpp"
 
@@ -60,15 +61,12 @@ void thpool::init(int size){
 }
 
 void thpool::destroy(){
+	for(int i=0;i<maxSize;i++)
+		pthread_cancel(th[i]);
 	pthread_mutex_destroy(&mutUpd);
 	pthread_mutex_destroy(&mutQS);
 	pthread_cond_destroy(&condWorker);
 	pthread_cond_destroy(&condPool);
-	for(int i=0;i<maxSize;i++);
-		// pthread_kill(th[i],SIGALRM);
-		// kill the threads in the pool
-		// but I don't know how to kill them
-		// so they will stay in the loop until the process ends
 }
 
 int thpool::getMaxSize(){

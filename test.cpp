@@ -28,7 +28,7 @@ int main(){
 	data d2={10,2,"bye\n"};
 	data d3={2,3,"good\n"};
 	data d4={5,4,"english\n"};
-	data d5={1,5,"fuckgod\n"};
+	data d5={1,5,"dish\n"};
 	Job j1;j1.init(fun,reinterpret_cast<void*>(&d1),2);
 	Job j2;j2.init(fun,reinterpret_cast<void*>(&d2),10);
 	Job j3;j3.init(fun,reinterpret_cast<void*>(&d3),2);
